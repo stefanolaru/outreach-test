@@ -58,7 +58,7 @@ window.TheMap = {
         }));
 
         // clear label
-        document.querySelector('.label').innerHTML = '';
+        document.querySelector('.label').innerHTML = 'Ok, you added a new neighbour on the map!';
 
         this.markers[len-1].addListener('click', function() {
             self.geocoder.geocode({
