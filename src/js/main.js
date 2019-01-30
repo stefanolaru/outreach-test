@@ -40,6 +40,8 @@ window.TheMap = {
         this.map.addListener('click', function (e) {
             // add marker
             self.addMarker(e.latLng.lat(), e.latLng.lng());
+            // clear label
+            document.querySelector('.label').innerHTML = 'Ok, you added a new neighbour on the map!';
         })
 
     },
@@ -56,9 +58,6 @@ window.TheMap = {
                 strokeColor: 'green'
             }
         }));
-
-        // clear label
-        document.querySelector('.label').innerHTML = 'Ok, you added a new neighbour on the map!';
 
         this.markers[len-1].addListener('click', function() {
             self.geocoder.geocode({
