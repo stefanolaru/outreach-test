@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const WebpackMd5Hash = require("webpack-md5-hash");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 // const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = {
@@ -56,6 +57,7 @@ module.exports = {
 			template: "./src/index.html",
 			filename: "index.html"
 		}),
-		new WebpackMd5Hash()
+		new WebpackMd5Hash(),
+		new BrowserSyncPlugin()
 	]
 };
